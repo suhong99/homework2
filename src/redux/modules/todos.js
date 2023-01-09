@@ -13,6 +13,7 @@ export const addTodo = (todo) => {
   };
 };
 export const toggleTodo = (id) => {
+  //id = 명칭은 payload인데 우리가 외부에 어떤 값을 받았는지 확인하기 위해서 id라적음
   return {
     type: TOGGLE_TODO,
     id,

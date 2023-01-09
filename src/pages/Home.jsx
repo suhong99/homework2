@@ -33,6 +33,7 @@ const Home = () => {
   const [content, setConTent] = useState("");
   // const [num, setNum] = useState(6);
   const addTodoHandler = (e) => {
+    // 초기값0 안되게
     e.preventDefault();
     if (title.trim() === "" || content.trim() === "") return;
     const todo = {
@@ -42,12 +43,11 @@ const Home = () => {
       content: content,
       isDone: false,
     };
-
+    // 입력값 초기화
     setTitle("");
     setConTent("");
     // setNum(num + 1);
     dispatch(addTodo(todo));
-    // console.log(num);
   };
 
   const deleteTodoHandler = (id) => {
